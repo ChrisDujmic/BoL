@@ -14,6 +14,8 @@ function Update_Needed(name,version)
 		end
 		DownloadFile(Common_Link, LIB_PATH .. "LX-Common.lua", AfterDownload)
 		return true
+	else 
+			Chat_Print("LX-Common","Loaded LX-Common v" .. tostring(Common_Version))
 	end
 	
 	Response = GetWebResult("raw.github.com", "/ChrisDujmic/BoL/master/" .. name .. ".lua" .. "?rand="..math.random(1,10000))
@@ -25,6 +27,8 @@ function Update_Needed(name,version)
 		end
 		DownloadFile(Script_Link, SCRIPT_PATH .. name .. ".lua", AfterDownload)
 		return true
+	else 
+		Chat_Print("LX-Common","Loaded " .. name .." v" .. tostring(version))
 	end
 	
 	return false

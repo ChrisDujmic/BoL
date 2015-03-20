@@ -1,4 +1,8 @@
---[Version0.02]
+--[Version0.01]
+local_ScriptName = "LX-Morgana"
+local_Author = "Lexxes"
+local_Version = 0.01
+local_UpdateDate = "20.03.2015"
 
 --[[
 
@@ -7,11 +11,6 @@
 ]]--
 
 if (myHero.charName) ~= "Morgana" then return end
-
-local_ScriptName = "LX-Morgana"
-local_Author = "Lexxes"
-local_Version = 0.02
-local_UpdateDate = "20.03.2015"
 
 if (FileExist(LIB_PATH .. "LX-Common.lua")) then 
 		require("LX-Common")
