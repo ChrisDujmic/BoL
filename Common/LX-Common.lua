@@ -5,11 +5,12 @@ function Update_Needed(name,version)
 	--CommonCheck
 	local Response = GetWebResult("raw.github.com", "/ChrisDujmic/BoL/master/Common/LX-Common.lua")
 	local OnlineVersion = string.match(Response,"%[Version(.-)%]")
+	Chat_Print("LX-Common","(v" .. tostring(Common_Version) .." -> v" .. OnlineVersion ..")")
 	if (version < tonumber(OnlineVersion)) then
 		Common_Link = "https://raw.githubusercontent.com/ChrisDujmic/BoL/master/Common/LX-Common.lua" .."?rand="..math.random(1,10000)
 		
 		function AfterDownload()
-			Chat_Print("LX-Common","Common Updated (v " .. tostring(Common_Version) .." -> v " .. OnlineVersion ..") please Reload (double F9)")
+			Chat_Print("LX-Common","Updated (v" .. tostring(Common_Version) .." -> v" .. OnlineVersion ..") please Reload (double F9)")
 		end
 		
 		DownloadFile(Common_Link, LIB_PATH .. "LX-Common.lua", AfterDownload)
