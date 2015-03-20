@@ -1,11 +1,5 @@
 --[Version0.02]
 
---[[
-
-	Script Name: 			LX-Morgana
-    Author: 					Lexxes	
-]]--
-
 if (myHero.charName) ~= "Morgana" then return end
 
 local_ScriptName = "LX-Morgana"
